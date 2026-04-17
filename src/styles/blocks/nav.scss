@@ -1,0 +1,43 @@
+.nav {
+  &__wrapper {
+    display: none;
+
+    @include on-small-desktop {
+      display: flex;
+      align-items: center;
+      margin-left: auto; // Притискає меню до правої сторони (до кнопки CTA)
+      margin-right: 114px; // Відступ від меню до кнопки Hire Us
+    }
+
+    @include on-design {
+      margin-right: 229px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  &__link {
+    @include on-small-desktop {
+      text-decoration: none;
+      color: $color-white;
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: opacity $effectDuration;
+
+      &:hover {
+        opacity: 1;
+        cursor: $custom-cursor, pointer;
+      }
+    }
+  }
+}

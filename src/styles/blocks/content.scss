@@ -1,0 +1,129 @@
+.content {
+  @include page-grid;
+
+  &__title {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 120%;
+    letter-spacing: -2px;
+    margin-top: 48px;
+    grid-column: 1/-1;
+
+    @include on-tablet {
+      font-size: 64px;
+      line-height: 68px;
+      margin-top: 56px;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 /5;
+      margin-top: 164px;
+      grid-row: 1;
+    }
+  }
+
+  &__text {
+    grid-column: 1 /-1;
+    display: block;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin-top: 32px;
+
+    @include on-tablet {
+      grid-column: 1 /5;
+      margin-top: 24px;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 /6;
+      margin-top: 32px;
+    }
+
+    @include on-design {
+      grid-column: 1 /5;
+    }
+
+    @include on-large-screens {
+      grid-column: 1 /5;
+    }
+  }
+
+  &__button {
+    grid-column: 1 /-1;
+    height: 50px;
+    padding: 14px;
+    margin-top: 72px;
+    margin-bottom: 48px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    border-radius: 8px;
+    background-color: $color-but-blue;
+    color: $color-white;
+    border: none;
+
+    &:hover {
+      cursor: $custom-cursor, pointer;
+      background-color: $color-bg-blue;
+    }
+
+    @include on-tablet {
+      width: 264px;
+      margin-top: 56px;
+      margin-bottom: 147px;
+    }
+
+    @include on-small-desktop {
+      margin-top: 83px;
+      margin-bottom: 205px;
+      grid-row: 3;
+    }
+  }
+
+  &__image {
+    grid-column: 1 /-1;
+    background-image: url(../images/air-black/Photo@2x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 390px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 30px;
+
+    @include on-small-desktop {
+      grid-row: 1 / 4;
+      grid-column: 7 / -1;
+      position: relative;
+      left: 0;
+      right: 10%;
+      margin-left: 0;
+      height: 680px;
+      border-radius: 30px 0;
+      margin-top: 48px;
+      width: auto;
+      margin-right: calc(50% - 50vw);
+    }
+
+    @include on-design {
+      grid-column: 8 / -1;
+      width: 687px;
+    }
+
+    @include on-large-screens {
+      width: 1167px;
+    }
+  }
+}
