@@ -5,8 +5,8 @@
     @include on-small-desktop {
       display: flex;
       align-items: center;
-      margin-left: auto; // Притискає меню до правої сторони (до кнопки CTA)
-      margin-right: 114px; // Відступ від меню до кнопки Hire Us
+      margin-left: auto;
+      margin-right: 114px;
     }
 
     @include on-design {
@@ -33,11 +33,11 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       transition: opacity $effectDuration;
-
-      &:hover {
-        opacity: 1;
-        cursor: $custom-cursor, pointer;
-      }
+      cursor: $custom-cursor, pointer;
     }
+  }
+
+  &__item {
+    @include hover(transform, scale(1.2));
   }
 }
